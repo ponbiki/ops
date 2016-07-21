@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block head %}
+        <meta http-equiv="Content-Type" charset="text/html; utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+        <link rel="shortcut icon" href="img/favicon.ico" type="image/vnd.microsoft.icon" />
+        <title>{% block title %}{% endblock %}</title>
+        {% block keywords %}{% endblock %}
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+        <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="application-name" content="7chan Radio">
+        {% block headscripts %}{% endblock %}
+    {% endblock %}
+</head>
+<body>
+{% block content %}{% endblock %}
+<!--  Scripts-->
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="js/materialize.js"></script>
+<script src="js/init.js"></script>
+{% block scripts %}{% endblock %}
+</body>
+</html>

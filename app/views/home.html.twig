@@ -1,0 +1,213 @@
+{% extends "base.html.twig" %}
+{% block title %}{{ page }}{% endblock %}
+{% block head %}
+    {{ parent() }}
+    {% block keywords %}
+        <meta name="keywords" content="7chan Radio, {{ meta }}">
+    {% endblock %}
+{% endblock %}
+{% block content %}
+    <nav class="deep-purple lighten-4" role="navigation">
+        <div class="nav-wrapper container">
+            <a id="logo-container" href="#" class="brand-logo">&#9773; 7chan Radio &#9773;</a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="#">Schedule</a></li>
+                <li><a href="#">DJ Lineup</a></li>
+                <li><a href="#">Chat</a></li>
+                <li><a href="#">DJ Login</a></li>
+            </ul>
+
+            <ul id="nav-mobile" class="side-nav light-blue lighten-4">
+                <li><a href="#">Schedule</a></li>
+                <li><a href="#">DJ Lineup</a></li>
+                <li><a href="#">Chat</a></li>
+                <li><a href="#">DJ Login</a></li>
+            </ul>
+            <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons light-blue-text text-lighten-1">menu</i></a>
+        </div>
+    </nav>
+
+    <div id="index-banner" class="parallax-container">
+        <div class="section no-pad-bot">
+            <div class="container">
+                <br><br>
+                <h1 class="header center blue-text text-lighten-1" style="text-shadow: -1px 0 purple, 0 1px purple, 1px 0 purple, 0 -1px purple;">7chan Radio</h1>
+                <div class="row center">
+                    <h5 class="header col s12 pink-text text-lighten-4" style="text-shadow:-1px 0 blue, 0 1px blue, 1px 0 blue, 0 -1px blue;">Only slightly worse than the music you already listen to!</h5>
+                </div>
+                <div class="row center" id="shown">
+                    <a href="#" id="listen-button" class="btn-large waves-effect waves-light blue lighten-1">Listen Now!</a>
+                </div>
+                <div id="hidden" class="row center" style="display: none;">
+                    <div id="jquery_jplayer_1" class="jp-jplayer"></div>
+                    <div id="jp_container_1" class="jp-audio" role="application" aria-label="media player">
+                        <button class="btn-floating waves-effect waves-light blue jp-mute" role="button" tabindex="0"><i class="material-icons">volume_off</i></button>
+                        <button class="btn-large waves-effect waves-light blue jp-play" role="button" tabindex="0"><i class="material-icons">play_arrow</i></button>
+                        <button class="btn-large waves-effect waves-light blue jp-stop" role="button" tabindex="0"><i class="material-icons">stop</i></button>
+                        <button class="btn-floating waves-effect waves-light blue jp-volume-max" role="button" tabindex="0"><i class="material-icons">volume_up</i></button>
+                        <div class="jp-current-time" role="timer" aria-label="time" style="padding-top: 20px;">&nbsp;</div>
+                        <div class="jp-no-solution">
+                            <span>Update Required</span>
+                            To play the media you will need to either update your browser to a recent version or update your <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>.
+                        </div>
+                    </div>
+                </div>
+                <br><br>
+
+            </div>
+
+
+        </div>
+        <div class="parallax"><img src="img/listen.jpg" alt="Unsplashed background img 1" id="girl1"></div>
+    </div>
+
+
+    <div class="container">
+        <div class="section">
+
+            <!--   Icon Section   -->
+            <div class="row">
+                <div class="col s12 m4">
+                    <div class="icon-block">
+                        <h2 class="center deep-purple-text lighten-3"><i class="material-icons">mic</i></h2>
+                        <h5 class="center">The Greatest DJs</h5>
+
+                        <p class="light">We have the best selection of DJs from around the world, spinning the best music from the widest variety of genres.  From Dance to Rap to Metal, we have you covered!</p>
+                    </div>
+                </div>
+
+                <div class="col s12 m4">
+                    <div class="icon-block">
+                        <h2 class="center deep-purple-text lighten-3"><i class="material-icons">radio</i></h2>
+                        <h5 class="center">Now Playing</h5>
+                        <p class="light"><ul class="center light"><span id="announcer"></span></ul></p>
+                    </div>
+                </div>
+
+                <div class="col s12 m4">
+                    <div class="icon-block">
+                        <h2 class="center deep-purple-text lighten-3"><i class="material-icons">chat_bubble_outline</i></h2>
+                        <h5 class="center">Listener Requests</h5>
+
+                        <p class="light">Didn't hear what you wanted?  Ask us to play it (and you have a snowball's chance in hell of getting it played)!</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="parallax-container valign-wrapper">
+        <div class="section no-pad-bot">
+            <div class="container">
+                <div class="row center">
+                    <h5 class="header col s12 orange-text text-accent-3 light">You are all a bunch of filthy weeaboos.</h5>
+                </div>
+            </div>
+        </div>
+        <div class="parallax"><img src="img/dj.jpg" alt="Unsplashed background img 2"></div>
+    </div>
+
+    <div class="container">
+        <div class="section">
+
+            <div class="row">
+                <div class="col s12 center">
+                    <h3><i class="mdi-content-send deep-purple-text lighten-3"></i></h3>
+                    <h4>Become a DJ</h4>
+                    <p class="left-align light">
+                        We aren't playing enough old school christian gangsta rap, or deep house homo-erotic country bluegrass for you?
+                        Then come be one of the few, the sad, the pariahs....become a 7chan Radio DJ!  We are always looking for new talent and new music.
+                        Come visit us in chat, tell us a bit about yourself, and what you'd like to spin.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="parallax-container valign-wrapper">
+        <div class="section no-pad-bot">
+            <div class="container">
+                <div class="row center">
+                    <h5 class="header col s12 pink-text text-accent-3 light">You are all a bunch of filthy weeaboos.</h5>
+                </div>
+            </div>
+        </div>
+        <div class="parallax"><img src="img/cute.jpg" alt="Unsplashed background img 3"></div>
+    </div>
+
+    <footer class="page-footer blue">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="grey-text text-lighten-1">"I don't want to use a stupid web player!"</h5>
+                    <p class="grey-text text-lighten-4">
+                        Prefer to use your own music player instead? No problem!
+                        Just tune in directly at <a class="pink-text text-lighten-1" href="http://radio.7chan.org:8000/radio.m3u">
+                            http://radio.7chan.org:8000/radio.m3u</a>
+                    </p>
+
+
+                </div>
+                <div class="col l3 s12">
+                    <h5 class="white-text">Settings</h5>
+                    <ul>
+                        <li><a class="white-text" href="#!">Nope</a></li>
+                        <li><a class="white-text" href="#!">Nothing</a></li>
+                        <li><a class="white-text" href="#!">Here</a></li>
+                    </ul>
+                </div>
+                <div class="col l3 s12">
+                    <h5 class="white-text">Connect</h5>
+                    <ul>
+                        <li><a class="white-text" href="https://7chan.org">7chan</a></li>
+                        <li><a class="white-text" href="https://7chan.org/ch7/">Channel 7</a></li>
+                        <li><a class="white-text" href="#!">!!HardCore Porn!!</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                Disaster by <a class="brown-text text-lighten-3" href="#">ponbiki</a>
+            </div>
+        </div>
+    </footer>
+    {% block scripts %}
+        <script type="text/javascript" src="/js/jquery.jplayer.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $.ajaxSetup({cache: false});
+                setInterval(function() {
+                    $('#announcer').load('/meta');;
+                }, 3000);
+                $("#jquery_jplayer_1").jPlayer({
+                    ready: function () {
+                        $(this).jPlayer("setMedia", {
+                            title: "7chan Radio",
+                            oga: "http://radio.7chan.org:8000/radio",
+                            mp3: "http://radio.7chan.org:8000/radio"
+                        });
+                    },
+                    cssSelectorAncestor: "#jp_container_1",
+                    swfPath: "/js",
+                    supplied: "oga, mp3",
+                    useStateClassSkin: true,
+                    autoBlur: false,
+                    smoothPlayBar: true,
+                    keyEnabled: true,
+                    remainingDuration: true,
+                    toggleDuration: true
+                });
+                $("#listen-button").click(function(e) {
+                    $("#hidden").toggle("fast");
+                    $("#shown").toggle("fast");
+                    $(".jp-play").trigger(e.type);
+                });
+            });
+        </script>
+    {% endblock %}
+{% endblock %}
