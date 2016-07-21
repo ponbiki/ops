@@ -12,7 +12,7 @@
   "license": "GPLv2",
   "autoload": {
     "psr-4": {
-      "ponbiki\\ops\\": "src/"
+      "ns1\\ops\\": "src/"
     }
   },
   "authors": [
