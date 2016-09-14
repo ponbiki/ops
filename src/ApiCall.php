@@ -34,6 +34,12 @@ class ApiCall implements iApiCall
         if (isset($arg_array['del'])) {
             \curl_setopt($ch, \CURLOPT_CUSTOMREQUEST, "DELETE");
         }
+        if (isset($arg_array['put'])) {
+            \curl_setopt($ch, \CURLOPT_CUSTOMREQUEST, "PUT");
+        }
+        if (isset($arg_array['post'])) {
+            \curl_setopt($ch, \CURLOPT_CUSTOMREQUEST, "POST");
+        }
         \curl_setopt($ch, \CURLOPT_RETURNTRANSFER, true);
         $this->body = \json_decode(\curl_exec($ch));
         \curl_close($ch);
