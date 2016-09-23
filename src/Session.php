@@ -2,8 +2,15 @@
 
 namespace ns1\ops;
 
+/**
+ * Class Session
+ * @package ns1\ops
+ */
 class Session implements iSession
 {
+    /**
+     * Session constructor.
+     */
     public function __construct()
     {
         ini_set('session.use_only_cookies', true);
@@ -20,6 +27,9 @@ class Session implements iSession
         }
     }
 
+    /**
+     *
+     */
     public static function logout()
     {
         if (isset($_SESSION['loggedin'])) {
@@ -31,6 +41,9 @@ class Session implements iSession
         }
     }
 
+    /**
+     *
+     */
     public static function clear()
     {
         unset($_SESSION['error']);
