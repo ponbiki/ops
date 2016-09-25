@@ -14,6 +14,7 @@ class ApiCall implements iApiCall
      * @var string JSON return
      */
     protected $body;
+    private $api_key = "ha no";
 
     /**
      * @param $arg_array
@@ -44,5 +45,10 @@ class ApiCall implements iApiCall
         $this->body = \json_decode(\curl_exec($ch));
         \curl_close($ch);
         return $this->body;
+    }
+
+    public function zoneInfo($zone)
+    {
+        $body = self::baseCurl()
     }
 }
