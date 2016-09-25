@@ -14,6 +14,8 @@ class ApiCall implements iApiCall
      * @var string JSON return
      */
     protected $body;
+    protected $clean_zone;
+    private $api_key = "ha no";
 
     /**
      * @param $arg_array
@@ -44,5 +46,19 @@ class ApiCall implements iApiCall
         $this->body = \json_decode(\curl_exec($ch));
         \curl_close($ch);
         return $this->body;
+    }
+
+    public function zoneInfo($zone)
+    {
+        $this->clean_zone = \filter_var($zone, \FILTER_SANITIZE_STRING);
+        $search_arg = "/zones/zoneinfo/$this->clean_zone?token=$this->api_key";
+        try {
+            $body = self::baseCurl(["arg" => $search_arg]);
+        } catch (\Exception $e) {
+            $code = $e->getCode();
+            $message = $e->getMessage();
+            print('Unable to poll API.' . \PHP_EOL . $code . \PHP_EOL . $message);
+        }
+        // TODO: return JSON handling
     }
 }
