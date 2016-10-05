@@ -59,6 +59,8 @@ class ApiCall implements iApiCall
             $message = $e->getMessage();
             print('Unable to poll API.' . \PHP_EOL . $code . \PHP_EOL . $message);
         }
-        // TODO: return JSON handling for zoneinfo
+        if (array_key_exists("message", $body)) {
+            return "ok";
+        }
     }
 }
