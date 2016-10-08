@@ -9,4 +9,4 @@ $app->get('/', function () use ($app) {
         'meta' => $meta
     ]);
 
-})->name('home');;
+})->name('home');
