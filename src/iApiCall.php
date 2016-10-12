@@ -14,6 +14,6 @@ interface iApiCall
      * @const string Base URL of ops-api for baseCurl method
      */
     const BASEURL = 'https://ops-api.nsone.co/v1/';
+    public function keyValidate($key);
     public function zoneInfo($zone);
-
 }

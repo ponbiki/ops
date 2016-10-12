@@ -48,6 +48,17 @@ class ApiCall implements iApiCall
         return $this->body;
     }
 
+    public function keyValidate($key)
+    {
+        $body = self::baseCurl(["key" => $key, "arg" => "zones"]);
+        if (array_key_exists('message', $body)) {
+            $this->valid_key = \FALSE;
+        } else {
+            $this->valid_key = $key;
+            self::zoneList($body);
+        }
+    }
+
     public function zoneInfo($zone)
     {
         $this->clean_zone = \filter_var($zone, \FILTER_SANITIZE_STRING);
